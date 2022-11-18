@@ -1,0 +1,6 @@
+extends ./layout
+
+block content
+  pre #{JSON.stringify(user, null, 4)}
+  form#login-form(action=`${env.BASE_URL}/logout`)
+    button#submit(type="submit") Logout

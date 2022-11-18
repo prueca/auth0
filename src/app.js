@@ -2,7 +2,8 @@ import 'dotenv/config'
 import path from 'path'
 import express from 'express'
 import sass from 'node-sass-middleware'
-import { PORT, SASS_CONFIG } from './config'
+import { auth } from 'express-openid-connect'
+import { PORT, SASS_CONFIG, AUTH_CONFIG } from './config'
 import routes from './routes'
 
 const app = express()
@@ -11,6 +12,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(sass(SASS_CONFIG))
+app.use(auth(AUTH_CONFIG))
 app.use(express.static(path.join(__dirname, 'public')))
 
 // view engine

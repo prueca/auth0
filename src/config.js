@@ -10,3 +10,12 @@ export const SASS_CONFIG = {
   prefix: '/css',
   debug: false
 }
+
+export const AUTH_CONFIG = {
+  authRequired: process.env.AUTH_REQUIRED === '1',
+  auth0Logout: process.env.AUTH0_LOGOUT === '1',
+  secret: process.env.SECRET,
+  baseURL: process.env.BASE_URL,
+  clientID: process.env.CLIENT_ID,
+  issuerBaseURL: process.env.ISSUER_BASE_URL
+}

@@ -1,0 +1,14 @@
+extends ./layout
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/css/sign-in.css")
+
+block content
+  #center-box
+    .vertical-center
+      h3 Key in your credentials
+      form#login-form(action=`${env.BASE_URL}/login`)
+        input#uname(type="text" placeholder="Enter username" value="peterrueca")
+        input#pwd(type="password" placeholder="Enter password" value="pwd123")
+        button#submit(type="submit") Login
+      p #{message}
