@@ -1,0 +1,30 @@
+#center-box
+  width: 320px
+  height: 100%
+  position: relative
+  margin: 0 auto
+
+  .vertical-center
+    width: 100%
+    position: absolute
+    top: 20%
+
+    .field
+      width: 100%
+      margin-bottom: 16px
+      padding: 16px
+      border: thin solid #888
+      border-radius: 8px
+      box-sizing: border-box
+
+    #pwd,
+    #uname
+      @extend .field
+
+    #submit
+      width: 100%
+      padding: 16px
+      border: thin solid #888
+      border-radius: 8px
+      box-sizing: border-box
+      cursor: pointer

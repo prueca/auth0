@@ -1,0 +1,22 @@
+extends ./layout
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/css/login.css")
+
+block content
+  #center-box
+    .vertical-center
+      h3 Key in your credentials
+      form#login-form(action=env.BASE_URL)
+        input#uname(type="text" placeholder="Enter username")
+        input#pwd(type="password" placeholder="Enter password")
+        button#submit(type="submit") Login
+      p #{status}
+
+block scripts
+  script(
+    src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+    crossorigin="anonymous"
+  )
+  script(src="/js/login.js")
