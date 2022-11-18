@@ -1,0 +1,23 @@
+{
+  "name": "auth0",
+  "version": "1.0.0",
+  "description": "Auth0 Demo",
+  "author": "Peter John R. Rueca",
+  "license": "ISC",
+  "main": "./dist/app.js",
+  "scripts": {
+    "start": "nodemon -L -r @babel/register ./src/app.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "node-sass-middleware": "^1.0.1",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.19.3",
+    "@babel/core": "^7.19.6",
+    "@babel/preset-env": "^7.19.4",
+    "@babel/register": "^7.18.9"
+  }
+}
