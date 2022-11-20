@@ -23,9 +23,11 @@ app.locals.env = process.env
 // bootstrap
 const jquery = path.join(__dirname, '../node_modules/jquery/dist')
 const axios = path.join(__dirname, '../node_modules/axios/dist')
+const auth0 = path.join(__dirname, '../node_modules/auth0-js/dist')
 
 app.use('/jquery', express.static(jquery))
 app.use('/axios', express.static(axios))
+app.use('/auth0', express.static(auth0))
 
 // routes
 app.use('/', routes)

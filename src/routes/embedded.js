@@ -3,11 +3,13 @@ import { Router } from 'express'
 const router = new Router()
 
 router.get('/', (req, res) => {
-  res.render('embedded')
+  res.render('embedded', {
+    signup: req.query.signup === '1'
+  })
 })
 
 router.get('/signup', (req, res) => {
-  res.render('embedded')
+  res.render('signup')
 })
 
 export default router

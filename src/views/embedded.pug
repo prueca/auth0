@@ -7,6 +7,8 @@ block content
   #center-box
     .vertical-center
       h2 Auth0 | Embedded Login
+      if signup
+        p Sign up successful. Login to proceed.
       form#login-form
         input#email.field(type="text" placeholder="Enter email address")
         input#pwd.field(type="password" placeholder="Enter password")

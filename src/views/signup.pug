@@ -7,7 +7,7 @@ block content
   #center-box
     .vertical-center
       h2 Auth0 | Sign Up
-      form#login-form
+      form#signup-form
         input#email.field(type="text" placeholder="Enter email address")
         input#pwd.field(type="password" placeholder="Enter password")
         button.btn(type="submit") Sign up
@@ -16,8 +16,11 @@ block content
 block scripts
   script(src="/jquery/jquery.min.js")
   script(src="/axios/axios.min.js")
+  script(src="/auth0/auth0.min.js")
   script.
-    const BASE_URL = '#{env.ISSUER_BASE_URL}'
+    const DOMAIN = '#{env.DOMAIN}'
     const CLIENT_ID = '#{env.CLIENT_ID}'
-    const SECRET = '#{env.SECRET}'
+    const SCOPE = '#{env.SCOPE}'
+    const REALM = '#{env.REALM}'
+  script(src="/js/auth-srvc.js")
   script(src="/js/signup.js")
