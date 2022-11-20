@@ -1,0 +1,22 @@
+extends ./layout
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/css/embedded.css")
+
+block content
+  #center-box
+    .vertical-center
+      h2 Auth0 | Embedded Login
+      form#login-form
+        input#email(type="text" placeholder="Enter email address" value="rueca.peterjohnn41@gmail.com")
+        input#pwd(type="password" placeholder="Enter password" value="diK0Alam@")
+        button#submit(type="submit") Login
+
+block scripts
+  script(src="/jquery/jquery.min.js")
+  script(src="/axios/axios.min.js")
+  script.
+    const BASE_URL = '#{env.ISSUER_BASE_URL}'
+    const CLIENT_ID = '#{env.CLIENT_ID}'
+    const SECRET = '#{env.SECRET}'
+  script(src="/js/login.js")

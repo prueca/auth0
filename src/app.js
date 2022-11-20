@@ -20,6 +20,13 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 app.locals.env = process.env
 
+// bootstrap
+const jquery = path.join(__dirname, '../node_modules/jquery/dist')
+const axios = path.join(__dirname, '../node_modules/axios/dist')
+
+app.use('/jquery', express.static(jquery))
+app.use('/axios', express.static(axios))
+
 // routes
 app.use('/', routes)
 

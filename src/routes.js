@@ -9,4 +9,8 @@ routes.get('/', (req, res) => {
   })
 })
 
+routes.get('/embedded', (req, res) => {
+  res.render('embedded')
+})
+
 export default routes
