@@ -17,9 +17,13 @@ block content
 
 block scripts
   script(src="/jquery/jquery.min.js")
-  script(src="/axios/axios.min.js")
+  script(src="/auth0/auth0.min.js")
   script.
-    const BASE_URL = '#{env.ISSUER_BASE_URL}'
+    const DOMAIN = '#{env.DOMAIN}'
     const CLIENT_ID = '#{env.CLIENT_ID}'
-    const SECRET = '#{env.SECRET}'
+    const SCOPE = '#{env.SCOPE}'
+    const REALM = '#{env.REALM}'
+    const LOGIN_REDIRECT_URI = '#{env.LOGIN_REDIRECT_URI}'
+    const LOGIN_RESPONSE_TYPE = '#{env.LOGIN_RESPONSE_TYPE}'
+  script(src="/js/auth-srvc.js")
   script(src="/js/login.js")

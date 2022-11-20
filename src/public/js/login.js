@@ -1,22 +1,27 @@
 const login = evt => {
   evt.preventDefault()
 
-  const opt = {
-    headers: {
-      'content-type': 'application/json'
-    }
-  }
-  const data = {
-    client_id: CLIENT_ID,
-    client_secret: SECRET,
-    connection: 'email',
-    email: $('#email').val(),
-    send: 'code'
+  const options = {
+    username: $('#email').val(),
+    password: $('#pwd').val(),
+    realm: REALM,
+    redirectUri: LOGIN_REDIRECT_URI,
+    responseType: LOGIN_RESPONSE_TYPE
   }
 
-  axios.post(`${BASE_URL}/passwordless/start`, data, opt)
-    .then(response => console.log(response.data))
-    .catch(error => console.log(error.message))
+  const callback = (error, result) => {
+    if (error) {
+      console.log('Oops! Login failed.')
+      console.log(error)
+      return
+    }
+
+    console.log('Login successful!')
+    console.log(result)
+  }
+
+  // immediately redirects to LOGIN_REDIRECT_URI
+  auth.login(options, callback)
 }
 
 $(() => $('#login-form').on('submit', login))

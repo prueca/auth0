@@ -12,4 +12,8 @@ router.get('/signup', (req, res) => {
   res.render('signup')
 })
 
+router.get('/user', (req, res) => {
+
+})
+
 export default router
