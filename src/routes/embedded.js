@@ -13,7 +13,7 @@ router.get('/signup', (req, res) => {
 })
 
 router.get('/user', (req, res) => {
-
+  res.render('user', { embedded: true })
 })
 
 export default router
