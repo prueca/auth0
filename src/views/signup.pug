@@ -6,12 +6,12 @@ block stylesheets
 block content
   #center-box
     .vertical-center
-      h2 Auth0 | Embedded Login
+      h2 Auth0 | Sign Up
       form#login-form
         input#email.field(type="text" placeholder="Enter email address")
         input#pwd.field(type="password" placeholder="Enter password")
-        button.btn(type="submit") Login
-      a.link(href="/embedded/signup") Don't have an account? Sign up here.
+        button.btn(type="submit") Sign up
+      a.link(href="/embedded") Already have an account? Login here.
 
 block scripts
   script(src="/jquery/jquery.min.js")
@@ -20,4 +20,4 @@ block scripts
     const BASE_URL = '#{env.ISSUER_BASE_URL}'
     const CLIENT_ID = '#{env.CLIENT_ID}'
     const SECRET = '#{env.SECRET}'
-  script(src="/js/login.js")
+  script(src="/js/signup.js")

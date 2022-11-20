@@ -21,6 +21,7 @@ export const AUTH_CONFIG = {
   issuerBaseURL: process.env.ISSUER_BASE_URL,
   routes: {
     login: false,
+    // redirect to /universal after logout
     postLogoutRedirect: '/universal'
   }
 }
