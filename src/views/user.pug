@@ -15,14 +15,17 @@ block content
         a.btn(href='/logout') Logout
 
 block scripts
-  script(src="/jquery/jquery.min.js")
-  script(src="/auth0/auth0.min.js")
-  script.
-    const DOMAIN = '#{env.DOMAIN}'
-    const CLIENT_ID = '#{env.CLIENT_ID}'
-    const SCOPE = '#{env.SCOPE}'
-    const REALM = '#{env.REALM}'
-    const LOGIN_REDIRECT_URI = '#{env.LOGIN_REDIRECT_URI}'
-    const LOGIN_RESPONSE_TYPE = '#{env.LOGIN_RESPONSE_TYPE}'
-  script(src="/js/auth-srvc.js")
-  script(src="/js/authenticate.js")
+  if embedded
+    script(src="/jquery/jquery.min.js")
+    script(src="/auth0/auth0.min.js")
+    script.
+      const DOMAIN = '#{env.DOMAIN}'
+      const CLIENT_ID = '#{env.CLIENT_ID}'
+      const SCOPE = '#{env.SCOPE}'
+      const REALM = '#{env.REALM}'
+      const LOGIN_REDIRECT_URI = '#{env.LOGIN_REDIRECT_URI}'
+      const LOGIN_RESPONSE_TYPE = '#{env.LOGIN_RESPONSE_TYPE}'
+      const LOGOUT_REDIRECT_URI = '#{env.LOGOUT_REDIRECT_URI}'
+    script(src="/js/auth-srvc.js")
+    script(src="/js/authenticate.js")
+    script(src="/js/logout.js")

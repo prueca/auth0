@@ -8,7 +8,7 @@ block content
     .vertical-center
       h2 Auth0 | Universal Login
       p #{isAuthenticated ? 'Logged in' : 'Logged out'}
-      a.btn(href=(isAuthenticated ? '/logout' : '/login'))
+      a.btn(href=(isAuthenticated ? '/logout' : '/universal/login'))
         | #{isAuthenticated ? 'Logout' : 'Login'}
       if user
         pre.user #{JSON.stringify(user, null, 4)}
