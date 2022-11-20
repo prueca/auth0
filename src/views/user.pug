@@ -1,0 +1,12 @@
+extends ./layout
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/css/user.css")
+
+block content
+  #center-box
+    .vertical-center
+      h2 Auth0 | Logged In
+      if user
+        pre.user #{JSON.stringify(user, null, 4)}
+      a.btn(href='/logout') Logout
