@@ -1,6 +1,7 @@
 import path from 'path'
 
-export const PORT = process.env.PORT || 8000
+export const PORT = process.env.PORT || 3000
+export const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`
 
 export const SASS_CONFIG = {
   src: path.join(__dirname, './sass'),
