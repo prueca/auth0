@@ -22,6 +22,6 @@ export const AUTH_CONFIG = {
   routes: {
     login: false,
     // redirect to /universal after logout
-    postLogoutRedirect: '/universal'
+    // postLogoutRedirect: '/universal'
   }
 }
