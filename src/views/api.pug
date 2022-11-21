@@ -1,0 +1,17 @@
+extends ./layout
+
+block stylesheets
+  link(rel="stylesheet" type="text/css" href="/css/api.css")
+
+block content
+  #center-box
+    .vertical-center
+      h2 Auth0 | API Authorization
+      button#public.btn Ping Public Endpoint
+      button#private.btn Ping Private Endpoint
+      p#result Click buttons to test
+
+block scripts
+  script(src="/jquery/jquery.min.js")
+  script(src="/axios/axios.min.js")
+  script(src="/js/ping.js")
