@@ -13,7 +13,7 @@ const authorizeAccessToken = jwt({
     jwksUri: `${AUTH_CONFIG.issuerBaseURL}/.well-known/jwks.json`
   }),
   audience: `${BASE_URL}/api`,
-  issuer: AUTH_CONFIG.issuerBaseURL,
+  issuer: `${AUTH_CONFIG.issuerBaseURL}/`,
   algorithms: ['RS256']
 })
 

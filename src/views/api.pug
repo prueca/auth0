@@ -14,4 +14,9 @@ block content
 block scripts
   script(src="/jquery/jquery.min.js")
   script(src="/axios/axios.min.js")
+  script.
+    const CLIENT_ID = '#{env.API_AUTH_CLIENT_ID}'
+    const CLIENT_SECRET = '#{env.API_AUTH_CLIENT_SECRET}'
+    const AUDIENCE = '#{env.BASE_URL}/api'
+    const REQUEST_URL = '#{env.ISSUER_BASE_URL}/oauth/token'
   script(src="/js/ping.js")

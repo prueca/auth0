@@ -1,6 +1,7 @@
 import 'dotenv/config'
 import path from 'path'
 import express from 'express'
+import cors from 'cors'
 import sass from 'node-sass-middleware'
 import { auth } from 'express-openid-connect'
 import { PORT, SASS_CONFIG, AUTH_CONFIG } from './config'
@@ -11,6 +12,7 @@ const app = express()
 // middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(cors())
 app.use(sass(SASS_CONFIG))
 app.use(auth(AUTH_CONFIG))
 app.use(express.static(path.join(__dirname, 'public')))

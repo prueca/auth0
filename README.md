@@ -8,7 +8,7 @@ Auth0 Demo
 
 ```bash
 $ cp .env.example .env
-$ npm run start
+$ npm run dev
 ```
 
 2. Open [http://localhost:3000](http://localhost:3000)
